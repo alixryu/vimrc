@@ -57,3 +57,16 @@ inoremap jk <esc>
 cmap w!! w !sudo tee > /dev/null %
 "
 "-----------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------
+" Search Settings
+"-----------------------------------
+" autocomplete searches
+set wildmenu
+" highlight search results
+set hlsearch
+" search as characters are entered
+set incsearch
+"
+"-----------------------------------------------------------------------
