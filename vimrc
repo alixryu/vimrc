@@ -1,6 +1,40 @@
 "-----------------------------------------------------------------------
-" Vim Styling Settings
+" Vim Basic Settings
+"-----------------------------------
+
+"-----------------------------------
+" Vundle Settings
+"-----------------
+
+" Install Vundle prior to following setting
+"  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+" Activate Vi Improved Functions
+set nocompatible
+" Setting in accordance to nocompatible
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+" alternatively, pass a path where Vundle should install plugins
+"  e.g.) vundle#begin('~/some/path/here')
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'gmarik/Vundle.vim'
+
+" All Plugins to be added between vundle#begin and vundle#end
+call vundle#end()
+" turn filetype (for plugin and indent) back on
+filetype plugin indent on
+"-----------------------------------
+
 "-----------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------
+" Vim Styling Settings
+"-----------------------------------
 set number
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
