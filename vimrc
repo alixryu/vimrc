@@ -22,6 +22,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
+" Vim-Fugitive : Git Wrapper
+Plugin 'tpope/vim-fugitive'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
