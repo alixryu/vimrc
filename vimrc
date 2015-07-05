@@ -26,6 +26,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 " Vim-Airline : Improved Status Line
 Plugin 'bling/vim-airline'
+" The NERD Tree : Tree File System Explorer
+Plugin 'scrooloose/nerdtree'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
