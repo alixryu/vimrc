@@ -30,6 +30,8 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 " Jedi-Vim : Python Auto Completion Library
 Plugin 'davidhalter/jedi-vim'
+" virtualenv.vim : Python virtualenv Enabler
+Plugin 'jmcantrell/vim-virtualenv'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
