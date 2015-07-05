@@ -28,6 +28,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 " The NERD Tree : Tree File System Explorer
 Plugin 'scrooloose/nerdtree'
+" Jedi-Vim : Python Auto Completion Library
+Plugin 'davidhalter/jedi-vim'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
