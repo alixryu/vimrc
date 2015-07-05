@@ -24,11 +24,23 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Vim-Fugitive : Git Wrapper
 Plugin 'tpope/vim-fugitive'
+" Vim-Airline : Improved Status Line
+Plugin 'bling/vim-airline'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
 " turn filetype (for plugin and indent) back on
 filetype plugin indent on
+"-----------------------------------
+"
+"-----------------------------------
+" Airline Settings
+"-----------------
+" powerline symbols
+let g:airline_powerline_fonts=1
+" fixes bug of airline activating from second split
+set laststatus=2
+"
 "-----------------------------------
 
 "-----------------------------------------------------------------------
