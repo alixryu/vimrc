@@ -1,5 +1,5 @@
 "-----------------------------------------------------------------------
-" Vim Basic Settings
+" Vim Plugin Settings
 "-----------------------------------
 
 "-----------------------------------
@@ -41,6 +41,7 @@ set number
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 set autoindent
+syntax on
 set background=dark
 set cursorline
 "set cusorcolumn
@@ -48,7 +49,6 @@ set cursorline
 set showcmd
 " Line Wrap <CTRL-V u21aa>
 set showbreak=↪
-syntax on
 "
 "-----------------------------------------------------------------------
 
