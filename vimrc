@@ -132,10 +132,14 @@ set matchtime=3
 "-----------------------------------------------------------------------
 " Key Mapping Settings
 "-----------------------------------
-" use jk to escape
-inoremap jk <esc>
+" use ;; to escape in insert mode
+inoremap ;; <esc>
+" use ;; to escape in visual mode
+vnoremap ;; <esc>
 " save with sudo permission
-cmap w!! w !sudo tee > /dev/null %
+cnoremap w!! w !sudo tee > /dev/null %
+" delete trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<CR>
 "
 "-----------------------------------------------------------------------
 
