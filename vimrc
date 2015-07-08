@@ -96,13 +96,18 @@ set showbreak=↪
 "-----------------------------------------------------------------------
 " Indentation Settings
 "-----------------------------------
+" align new line's indent with previous line's
+set autoindent
+" set number of columns for auto-indenting
 set shiftwidth=4
+" set number of columns for TAB/BACKSPACE
 set softtabstop=4
+" set insert spaces for TAB
 set expandtab
-"
-" Indentation settings for using hard tabs
-"set tabstop=4
-"set shiftwidth=4
+" set number of columns for displaying hard TAB
+set tabstop=4
+" break line after given number of columns
+set textwidth=79
 "
 "-----------------------------------------------------------------------
 
