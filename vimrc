@@ -32,13 +32,15 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'davidhalter/jedi-vim'
 " virtualenv.vim : Python virtualenv Enabler
 Plugin 'jmcantrell/vim-virtualenv'
+" Vim-Colors-Solarized : Color Scheme of Choice
+Plugin 'altercation/vim-colors-solarized'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
 " turn filetype (for plugin and indent) back on
 filetype plugin indent on
 "-----------------------------------
-"
+
 "-----------------------------------
 " Airline Settings
 "-----------------
@@ -46,6 +48,18 @@ filetype plugin indent on
 let g:airline_powerline_fonts=1
 " fixes bug of airline activating from second split
 set laststatus=2
+"
+"-----------------------------------
+
+"-----------------------------------
+" Solarized Settings
+"-----------------
+" visibility of characters affected by the set list option
+let g:solarized_visibility="low"
+" enabling recommended when iTerm profile color is set to solarized
+let g:solarized_termcolors=16
+" enable the solarized color scheme
+colorscheme solarized
 "
 "-----------------------------------
 
