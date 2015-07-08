@@ -69,17 +69,25 @@ colorscheme solarized
 "-----------------------------------------------------------------------
 " Vim Styling Settings
 "-----------------------------------
-set number
-set ruler
-set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
-set autoindent
+" enable syntax highlighting
 syntax on
+" enable line numbering
+set number
+" enable status line ruler
+set ruler
+" enable datetime display for ruler
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+" display trailing whitespace with <CTRL-V u22c5> and EOL with <CTRL-V u21b2>
+set list listchars=trail:·,eol:↲
+" set background type to be dark
 set background=dark
+" enable current line highlighting
 set cursorline
-"set cusorcolumn
+" enable current column highlighting
+set cursorcolumn
 " show (partial) command in the last line of the screen
 set showcmd
-" Line Wrap <CTRL-V u21aa>
+" display line wrap as <CTRL-V u21aa>
 set showbreak=↪
 "
 "-----------------------------------------------------------------------
