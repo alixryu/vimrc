@@ -1,4 +1,10 @@
 "-----------------------------------------------------------------------
+" heavenk21 .vimrc
+"
+" https://github.com/heavenk21/vimrc.git
+"-----------------------------------------------------------------------
+
+"-----------------------------------------------------------------------
 " Vim Plugin Settings
 "-----------------------------------
 
@@ -46,6 +52,8 @@ filetype plugin indent on
 "-----------------
 " powerline symbols
 let g:airline_powerline_fonts=1
+" display buffers like tabs
+"let g:airline#extensions#tabline#enabled=1
 " fixes bug of airline activating from second split
 set laststatus=2
 "
@@ -160,6 +168,7 @@ set incsearch
 "-----------------------------------------------------------------------
 " Uncategorized Essentials
 "-----------------------------------
+" hides unloaded buffer and keeps track of changes
 set hidden
 " spell checker
 set spell
