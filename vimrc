@@ -114,8 +114,6 @@ set softtabstop=4
 set expandtab
 " set number of columns for displaying hard TAB
 set tabstop=4
-" break line after given number of columns
-set textwidth=79
 "
 "-----------------------------------------------------------------------
 
