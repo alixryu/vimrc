@@ -40,6 +40,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
 " Vim-Colors-Solarized : Color Scheme of Choice
 Plugin 'altercation/vim-colors-solarized'
+" unite.vim : Integrated Search Module
+Plugin 'Shougo/unite.vim'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
