@@ -44,6 +44,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'Shougo/unite.vim'
 " vimproc.vim : Interactive Command Execution
 Plugin 'Shougo/vimproc.vim'
+
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
 " turn filetype (for plugin and indent) back on
@@ -154,6 +155,8 @@ set matchtime=3
 "-----------------------------------------------------------------------
 " Key Mapping Settings
 "-----------------------------------
+" change leader key
+let mapleader=","
 " use ;; to escape in insert mode
 inoremap ;; <esc>
 " use ;; to escape in visual mode
