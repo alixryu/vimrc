@@ -42,7 +42,8 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'altercation/vim-colors-solarized'
 " unite.vim : Integrated Search Module
 Plugin 'Shougo/unite.vim'
-
+" vimproc.vim : Interactive Command Execution
+Plugin 'Shougo/vimproc.vim'
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
 " turn filetype (for plugin and indent) back on
@@ -70,6 +71,19 @@ let g:solarized_visibility="low"
 let g:solarized_termcolors=16
 " enable the solarized color scheme
 colorscheme solarized
+"
+"-----------------------------------
+"
+"-----------------------------------
+" Unite Settings
+"-----------------
+" recursive file search
+nnoremap <C-p> :Unite file_rec/async<cr>
+" content search using vimproc (vimproc installation required)
+nnoremap <space>/ :Unite grep:.<cr>
+" yank history search
+let g:unite_source_history_yank_enable = 1
+nnoremap <space>y :Unite history/yank<cr>
 "
 "-----------------------------------
 
