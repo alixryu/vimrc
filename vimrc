@@ -57,7 +57,7 @@ filetype plugin indent on
 " powerline symbols
 let g:airline_powerline_fonts=1
 " display buffers like tabs
-"let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#enabled=1
 " fixes bug of airline activating from second split
 set laststatus=2
 "
@@ -100,7 +100,7 @@ syntax on
 set number
 " enable status line ruler
 set ruler
-" enable datetime display for ruler
+" enable datetime display for ruler (normally overwritten by airline)
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 " display trailing whitespace with <CTRL-V u22c5> and EOL with <CTRL-V u21b2>
 set list listchars=trail:·,eol:↲
@@ -114,6 +114,11 @@ set cursorcolumn
 set showcmd
 " display line wrap as <CTRL-V u21aa>
 set showbreak=↪
+
+" Highlight lines that exceed 80 characters
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" return to the next line, the word exceeding the line character limit
+match OverLength /\%81v.\+/
 "
 "-----------------------------------------------------------------------
 
@@ -138,16 +143,16 @@ set tabstop=4
 "-----------------------------------------------------------------------
 " Brace Match Settings
 "-----------------------------------
-"visual select all contents between matching braces
+" visual select all contents between matching braces
 noremap % v%
 " briefly jump to matching brace when ending brace is inserted
 set showmatch
 " set showmatch jump time
 set matchtime=3
 " showmatch screen scroll
-"inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
-"inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
-"inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 "
 "-----------------------------------------------------------------------
 
@@ -157,10 +162,13 @@ set matchtime=3
 "-----------------------------------
 " change leader key
 let mapleader=","
+
+" if caps lock configured to ctrl key, ignore below mappings and use ctrl+[
 " use ;; to escape in insert mode
 inoremap ;; <esc>
 " use ;; to escape in visual mode
 vnoremap ;; <esc>
+
 " save with sudo permission
 cnoremap w!! w !sudo tee > /dev/null %
 " delete trailing whitespace
