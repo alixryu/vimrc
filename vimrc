@@ -62,7 +62,15 @@ let g:airline#extensions#tabline#enabled=1
 set laststatus=2
 "
 "-----------------------------------
-
+"
+"-----------------------------------
+" Virtualenv Settings
+"-----------------
+" set virtualenv directory
+let g:virtualenv_directory = '~/.venv'
+"
+"-----------------------------------
+"
 "-----------------------------------
 " Solarized Settings
 "-----------------
