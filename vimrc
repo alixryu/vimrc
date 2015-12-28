@@ -124,9 +124,9 @@ set showcmd
 set showbreak=↪
 
 " Highlight lines that exceed 80 characters
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 " return to the next line, the word exceeding the line character limit
-match OverLength /\%81v.\+/
+" match OverLength /\%81v.\+/
 "
 "-----------------------------------------------------------------------
 
@@ -173,9 +173,9 @@ let mapleader=","
 
 " if caps lock configured to ctrl key, ignore below mappings and use ctrl+[
 " use ;; to escape in insert mode
-inoremap ;; <esc>
+" inoremap ;; <esc>
 " use ;; to escape in visual mode
-vnoremap ;; <esc>
+" vnoremap ;; <esc>
 
 " save with sudo permission
 cnoremap w!! w !sudo tee > /dev/null %
