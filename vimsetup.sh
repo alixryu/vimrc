@@ -1,6 +1,6 @@
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-source=$HOME/ajlc-env/vimrc/vimrc.link
+source="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/vimrc.link"
 target="$HOME/.$( basename $source ".link" )"
 if [ -e $target ]; then
     echo "~${target#$HOME} currently exists. Removing current version..."
