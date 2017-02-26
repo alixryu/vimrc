@@ -182,6 +182,14 @@ let mapleader=","
 cnoremap w!! w !sudo tee > /dev/null %
 " delete trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<CR>
+
+" buffer maneuvering
+" delete current buffer and bring next buffer to current window
+command! Bn bn|bd#
+" delete current buffer and bring previous buffer to current window
+command! Bp bp|bd#
+" delete current buffer and bring most recent buffer to current window
+command! Bs b#|bd#
 "
 "-----------------------------------------------------------------------
 
