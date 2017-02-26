@@ -42,6 +42,8 @@ Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
 " Vim-Colors-Solarized : Color Scheme of Choice
 Plugin 'altercation/vim-colors-solarized'
+" vim-numbertoggle : smarter number toggle
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
@@ -107,6 +109,8 @@ let NERDTreeIgnore=['__pycache__[[dir]]', '[/.]*.swp[[file]]']
 syntax on
 " enable line numbering
 set number
+" set relative line numbering
+set relativenumber
 " enable status line ruler
 set ruler
 " enable datetime display for ruler (normally overwritten by airline)
