@@ -5,11 +5,7 @@
 "-----------------------------------------------------------------------
 
 "-----------------------------------------------------------------------
-" Vim Plugin Settings
-"-----------------------------------
-
-"-----------------------------------
-" Vundle Settings
+" Vundle Plugin Settings
 "-----------------
 
 " Install Vundle prior to following setting
@@ -48,6 +44,10 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'junegunn/fzf'
 " fzf.vim : fzf :heart: vim
 Plugin 'junegunn/fzf.vim'
+" vim-scala : Scala Integration
+Plugin 'derekwyatt/vim-scala'
+" ensime-vim : Scala Integration
+Plugin 'ensime/ensime-vim'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
@@ -55,6 +55,39 @@ call vundle#end()
 filetype plugin indent on
 "-----------------------------------
 "
+"-----------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------
+" Key Mapping Settings
+"-----------------------------------
+" change leader key
+let mapleader=","
+
+" if caps lock configured to ctrl key, ignore below mappings and use ctrl+[
+" use ;; to escape in insert mode
+" inoremap ;; <esc>
+" use ;; to escape in visual mode
+" vnoremap ;; <esc>
+
+" save with sudo permission
+cnoremap w!! w !sudo tee > /dev/null %
+" delete trailing whitespace
+nnoremap <leader>W :%s/\s\+$//<CR>
+
+" buffer maneuvering
+" delete current buffer and bring next buffer to current window
+command! Bn bn|bd#
+" delete current buffer and bring previous buffer to current window
+command! Bp bp|bd#
+" delete current buffer and bring most recent buffer to current window
+command! Bs b#|bd#
+"
+"-----------------------------------------------------------------------
+
+
+"-----------------------------------------------------------------------
+" Plugin Customizations
 "-----------------------------------
 " Airline Settings
 "-----------------
@@ -106,7 +139,20 @@ nnoremap <space>/ :Find<space>
 nnoremap <tab>/ :Files<space>
 "
 "-----------------------------------
-
+"
+"-----------------------------------
+" Ensime Settings
+"-----------------
+" use python2
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+nnoremap <leader>d :EnDeclaration<CR>
+nnoremap <leader>t :EnInspectType<CR>
+nnoremap <leader>r :EnRename<CR>
+nnoremap <leader>/ :EnSearch<space>
+"
+"-----------------------------------
+"
 "-----------------------------------------------------------------------
 
 
@@ -174,34 +220,6 @@ set matchtime=3
 inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
-"
-"-----------------------------------------------------------------------
-
-
-"-----------------------------------------------------------------------
-" Key Mapping Settings
-"-----------------------------------
-" change leader key
-let mapleader=","
-
-" if caps lock configured to ctrl key, ignore below mappings and use ctrl+[
-" use ;; to escape in insert mode
-" inoremap ;; <esc>
-" use ;; to escape in visual mode
-" vnoremap ;; <esc>
-
-" save with sudo permission
-cnoremap w!! w !sudo tee > /dev/null %
-" delete trailing whitespace
-nnoremap <leader>W :%s/\s\+$//<CR>
-
-" buffer maneuvering
-" delete current buffer and bring next buffer to current window
-command! Bn bn|bd#
-" delete current buffer and bring previous buffer to current window
-command! Bp bp|bd#
-" delete current buffer and bring most recent buffer to current window
-command! Bs b#|bd#
 "
 "-----------------------------------------------------------------------
 
