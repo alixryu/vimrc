@@ -44,6 +44,10 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'altercation/vim-colors-solarized'
 " vim-numbertoggle : smarter number toggle
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+" fzf : general purpose fuzzy finder
+Plugin 'junegunn/fzf'
+" fzf.vim : fzf :heart: vim
+Plugin 'junegunn/fzf.vim'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
@@ -92,10 +96,14 @@ let NERDTreeIgnore=['__pycache__[[dir]]', '[/.]*.swp[[file]]']
 "-----------------------------------
 "
 "-----------------------------------
-" NERD TREE Settings
+" fzf Settings
 "-----------------
-" ignore the following: [pycache directories, vim .swp files, ]
-let NERDTreeIgnore=['__pycache__[[dir]]', '[/.]*.swp[[file]]']
+" enable :Find command (requires ripgrep from shell)
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+" search lines for {argument} all files under current directory
+nnoremap <space>/ :Find<space>
+" search files for {argument} under current directory
+nnoremap <tab>/ :Files<space>
 "
 "-----------------------------------
 
