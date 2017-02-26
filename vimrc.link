@@ -30,6 +30,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " Vim-Fugitive : Git Wrapper
 Plugin 'tpope/vim-fugitive'
+" vim-gitgutter : Git Diff Presenter
+Plugin 'airblade/vim-gitgutter'
 " Vim-Airline : Improved Status Line
 Plugin 'bling/vim-airline'
 " The NERD Tree : Tree File System Explorer
