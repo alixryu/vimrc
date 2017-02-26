@@ -143,13 +143,20 @@ nnoremap <tab>/ :Files<space>
 "-----------------------------------
 " Ensime Settings
 "-----------------
-" use python2
+" designate python2 location
 let g:python_host_prog = '/usr/local/bin/python'
+" designate python3 location
 let g:python3_host_prog = '/usr/local/bin/python3'
+" declaration key binding
 nnoremap <leader>d :EnDeclaration<CR>
+" type inspection key binding
 nnoremap <leader>t :EnInspectType<CR>
+" name refactoring key binding
 nnoremap <leader>r :EnRename<CR>
+" project search key binding
 nnoremap <leader>/ :EnSearch<space>
+" auto-complete key binding
+inoremap <C-space> <C-x><C-o>
 "
 "-----------------------------------
 "
