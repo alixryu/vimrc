@@ -32,10 +32,6 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 " The NERD Tree : Tree File System Explorer
 Plugin 'scrooloose/nerdtree'
-" Jedi-Vim : Python Auto Completion Library
-Plugin 'davidhalter/jedi-vim'
-" virtualenv.vim : Python virtualenv Enabler
-Plugin 'jmcantrell/vim-virtualenv'
 " Vim-Colors-Solarized : Color Scheme of Choice
 Plugin 'altercation/vim-colors-solarized'
 " vim-numbertoggle : smarter number toggle
