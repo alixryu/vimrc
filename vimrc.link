@@ -236,6 +236,10 @@ set wildmenu
 set hlsearch
 " search as characters are entered
 set incsearch
+" ignore case when searching
+set ignorecase
+" but not when upper case is explicitly used
+set smartcase
 "
 "-----------------------------------------------------------------------
 
