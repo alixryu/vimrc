@@ -32,6 +32,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 " The NERD Tree : Tree File System Explorer
 Plugin 'scrooloose/nerdtree'
+" nerdtree-git-plugin : git integration to nerd tree
+Plugin 'xuyuanp/nerdtree-git-plugin'
 " Vim-Colors-Solarized : Color Scheme of Choice
 Plugin 'altercation/vim-colors-solarized'
 " vim-numbertoggle : smarter number toggle
