@@ -44,6 +44,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'derekwyatt/vim-scala'
 " ensime-vim : Scala Integration
 Plugin 'ensime/ensime-vim'
+" vim-multiple-cursors : sublime-like cursors
+Plugin 'terryma/vim-multiple-cursors'
 
 " All Plugins to be added between vundle#begin and vundle#end
 call vundle#end()
