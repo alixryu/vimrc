@@ -29,7 +29,9 @@ Plugin 'tpope/vim-fugitive'
 " vim-gitgutter : Git Diff Presenter
 Plugin 'airblade/vim-gitgutter'
 " Vim-Airline : Improved Status Line
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+" vim-airline-themes : airline themes
+Plugin 'vim-airline/vim-airline-themes'
 " The NERD Tree : Tree File System Explorer
 Plugin 'scrooloose/nerdtree'
 " nerdtree-git-plugin : git integration to nerd tree
@@ -93,6 +95,14 @@ command! Bs b#|bd#
 "-----------------
 " powerline symbols
 let g:airline_powerline_fonts=1
+" set airline specific theme
+if has("nvim")
+  let g:airline_theme='hybridline'
+else
+  let g:airline_theme='dark'
+endif
+" customize airline section a (remove spell)
+"let g:airline_section_a = airline#section#create(['mode', 'crypt', ' ', 'paste', 'iminsert'])
 " display buffers like tabs
 let g:airline#extensions#tabline#enabled=1
 " fixes bug of airline activating from second split
