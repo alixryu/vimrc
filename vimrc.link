@@ -97,14 +97,6 @@ set laststatus=2
 "-----------------------------------
 "
 "-----------------------------------
-" Virtualenv Settings
-"-----------------
-" set virtualenv directory
-let g:virtualenv_directory = '~/.venv'
-"
-"-----------------------------------
-"
-"-----------------------------------
 " Solarized Settings
 "-----------------
 " visibility of characters affected by the set list option
