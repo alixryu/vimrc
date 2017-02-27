@@ -117,6 +117,10 @@ colorscheme solarized
 "-----------------
 " ignore the following: [pycache directories, vim .swp files, ]
 let NERDTreeIgnore=['__pycache__[[dir]]', '[/.]*.swp[[file]]']
+" automatically close buffer deleted in NERDTree
+let NERDTreeAutoDeleteBuffer = 1
+" change Vim's cwd whenever NERDTree's root changes
+let NERDTreeChDirMode = 2
 "
 "-----------------------------------
 "
